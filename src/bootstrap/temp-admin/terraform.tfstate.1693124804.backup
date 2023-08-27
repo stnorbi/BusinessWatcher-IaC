@@ -1,0 +1,361 @@
+{
+  "version": 4,
+  "terraform_version": "1.5.4",
+  "serial": 15,
+  "lineage": "543552f4-45ba-5cb1-584a-878ee88b232f",
+  "outputs": {
+    "temp_admin_access_key": {
+      "value": "AKIAVSBQ2CEBGRYOUT4F",
+      "type": "string"
+    },
+    "temp_admin_secret_key": {
+      "value": "wcFMA8r7ZEoeSLcLARAAlOivYpG4WehYZPorKoycC043CEO8EB23rEWXb2I2qZVZ61k3o0XW00UtTsqFQKHSms71UVptvfTEQ/EtPK6sdLBSe3J5lmJHqb3fbUNOwrE8sFaewnPNkwoTyUDIt9qEyDyVAz+v/+f4CiFQwy0pKn9FufCfvSBnV2oRNRTz+N0I9V4Ztftj0a0MDuzVoOJ+2GMp/I3F8pynL0SGXReHuPEtN/U1cfsACrInloDt5xXYLRRveLp+8AuAa6/YfSfR6urLK2Ts2JF8Yvy+DtYeCX87+iIMT27IB7xNnv7xsPdH7frYY9sPUktDhj0TOoXb+CnNAtf85twwrLg2CKDk2vNk6lRHIAY6znE8K7D7BzAwQcNw7sLUMnl7smJV8yt0OeTd+ie93nqiHrwHUxWQMZ2t1wqHWv4iacCpBc3chrHgmbha8Sfad6AJstlwRf9RIIe51NWp451AM9abTeAldBp5i5t95VabDIzQ59FZy2GZQB4ywPknIa6XGz1kitO2qVpbpfPm84RJuSjvvQmPwlzzhnPoTtDJGOkZQlevk8unt2czFf91RHmSeI+xxuj4RM6RT7ZbkEXjH90bd/zU/zle3EZDR4w20qR28XXGm4YwZFT9RwexRgAs3MnisZO5/H8GYkxe8xEKQoFRXCbGQoCLQLG+ufmhwXqK6RCNlQLSWQH51jx7d/zEgPAQZgH6gzPIvPLtlBQVXJY7eAOl14bXAQhPr/NxEB3AOkrRuPjflMwchRnnw5q2Yp9fvh1NTDoqiPTqjVAMtDcb79kOz3rMQ9foTwaW1thX",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "mode": "data",
+      "type": "terraform_remote_state",
+      "name": "organization",
+      "provider": "provider[\"terraform.io/builtin/terraform\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "backend": "s3",
+            "config": {
+              "value": {
+                "bucket": "businesswatcher-iac-eu-central-1-deployment-terraform-state",
+                "key": "management/organization/terraform.tfstate",
+                "region": "eu-central-1",
+                "role_arn": "arn:aws:iam::382354460930:role/OrganizationAccountAccessRole"
+              },
+              "type": [
+                "object",
+                {
+                  "bucket": "string",
+                  "key": "string",
+                  "region": "string",
+                  "role_arn": "string"
+                }
+              ]
+            },
+            "defaults": null,
+            "outputs": {
+              "value": {
+                "account_ids": {
+                  "deployment": "382354460930",
+                  "development": "519634537828",
+                  "logging": "368649255328",
+                  "management": "541940923338",
+                  "security": "288485522557",
+                  "shared-services": "607231369059"
+                },
+                "crossaccount_assume_from_deployment_account_policy_json": "{\n  \"Version\": \"2012-10-17\",\n  \"Statement\": [\n    {\n      \"Sid\": \"AssumeFromDeploymentAccount\",\n      \"Effect\": \"Allow\",\n      \"Action\": \"sts:AssumeRole\",\n      \"Principal\": {\n        \"AWS\": \"382354460930\"\n      }\n    }\n  ]\n}",
+                "deployment_terraform_deploy_role_policy_arn": "arn:aws:iam::382354460930:policy/CoreDeploymentAccountTerraformDeploymentRoleAccess",
+                "development_terraform_deploy_role_policy_arn": "arn:aws:iam::382354460930:policy/CoreDevelopmentAccountTerraformDeploymentRoleAccess",
+                "logging_terraform_deploy_role_policy_arn": "arn:aws:iam::382354460930:policy/CoreLoggingAccountTerraformDeploymentRoleAccess",
+                "management_terraform_deploy_role_policy_arn": "arn:aws:iam::382354460930:policy/ManagementTerraformDeploymentRoleAccess",
+                "security_terraform_deploy_role_policy_arn": "arn:aws:iam::382354460930:policy/CoreSecurityAccountTerraformDeploymentRoleAccess",
+                "shared_services_terraform_deploy_role_policy_arn": "arn:aws:iam::382354460930:policy/CoreSharedServicesAccountTerraformDeploymentRoleAccess",
+                "terraform_admin_role_policy_arn": "arn:aws:iam::382354460930:policy/CoreDeploymentAccountTerraformAdministratorRoleAccess",
+                "terraform_reader_role_policy_arn": "arn:aws:iam::382354460930:policy/CoreDeploymentAccountTerraformReaderRoleAccess"
+              },
+              "type": [
+                "object",
+                {
+                  "account_ids": [
+                    "object",
+                    {
+                      "deployment": "string",
+                      "development": "string",
+                      "logging": "string",
+                      "management": "string",
+                      "security": "string",
+                      "shared-services": "string"
+                    }
+                  ],
+                  "crossaccount_assume_from_deployment_account_policy_json": "string",
+                  "deployment_terraform_deploy_role_policy_arn": "string",
+                  "development_terraform_deploy_role_policy_arn": "string",
+                  "logging_terraform_deploy_role_policy_arn": "string",
+                  "management_terraform_deploy_role_policy_arn": "string",
+                  "security_terraform_deploy_role_policy_arn": "string",
+                  "shared_services_terraform_deploy_role_policy_arn": "string",
+                  "terraform_admin_role_policy_arn": "string",
+                  "terraform_reader_role_policy_arn": "string"
+                }
+              ]
+            },
+            "workspace": null
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_access_key",
+      "name": "temp_admin",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"].assume_deployment",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "create_date": "2023-08-26T09:20:54Z",
+            "encrypted_secret": "wcFMA8r7ZEoeSLcLARAAlOivYpG4WehYZPorKoycC043CEO8EB23rEWXb2I2qZVZ61k3o0XW00UtTsqFQKHSms71UVptvfTEQ/EtPK6sdLBSe3J5lmJHqb3fbUNOwrE8sFaewnPNkwoTyUDIt9qEyDyVAz+v/+f4CiFQwy0pKn9FufCfvSBnV2oRNRTz+N0I9V4Ztftj0a0MDuzVoOJ+2GMp/I3F8pynL0SGXReHuPEtN/U1cfsACrInloDt5xXYLRRveLp+8AuAa6/YfSfR6urLK2Ts2JF8Yvy+DtYeCX87+iIMT27IB7xNnv7xsPdH7frYY9sPUktDhj0TOoXb+CnNAtf85twwrLg2CKDk2vNk6lRHIAY6znE8K7D7BzAwQcNw7sLUMnl7smJV8yt0OeTd+ie93nqiHrwHUxWQMZ2t1wqHWv4iacCpBc3chrHgmbha8Sfad6AJstlwRf9RIIe51NWp451AM9abTeAldBp5i5t95VabDIzQ59FZy2GZQB4ywPknIa6XGz1kitO2qVpbpfPm84RJuSjvvQmPwlzzhnPoTtDJGOkZQlevk8unt2czFf91RHmSeI+xxuj4RM6RT7ZbkEXjH90bd/zU/zle3EZDR4w20qR28XXGm4YwZFT9RwexRgAs3MnisZO5/H8GYkxe8xEKQoFRXCbGQoCLQLG+ufmhwXqK6RCNlQLSWQH51jx7d/zEgPAQZgH6gzPIvPLtlBQVXJY7eAOl14bXAQhPr/NxEB3AOkrRuPjflMwchRnnw5q2Yp9fvh1NTDoqiPTqjVAMtDcb79kOz3rMQ9foTwaW1thX",
+            "encrypted_ses_smtp_password_v4": "wcFMA8r7ZEoeSLcLAQ//f2j5D6m9eEounNMjkCud7a+nhE1xdkVyttW4tCH/ry621spLcdNXrtThB9ZOHkpgVsLvLAuDrf2eM2V5OxkJkjWNEKvmB1npzdK/KMTTzKYhZpvio9AyxcDFES7/irRWNfeXFlzdWEgFUJwSZA3HJR6KVGFdv+zpA2+p0vd6taYAXadFrjU96gaIhp+pmNcJzVpHYMGwCW6l3Vdf+alzLneurdD3a62p5SAUMeoPW/jm8yNt8kYq5IXez662uQFAeVsB+0FiaJPYUe8VBjXKufApBp0H2MStacZVOQb8EXTkQ6voBVqUZV/f3VdT2ddoF6N/OMPQzsgWM2bL1Kx1iTfI+WNekUkpNPnecRAoE2sHJbZaN1fToTGWfRhwjS0lbmAaKMpnze0OBMmBNCCupy8yAGXVsqghFWp7AQoTFo2LGyyjRFP44S1rF29FW5ZUSjAp2w+WRlRv/ZNUQj7NR3PadwW8tGQ7hF/MBZBwH6AMToQMaAO6EG5cm79vfXLkS5QnEMZtspB1Kk41JnTBqSeVF3GwJEF7r21bJIBSXuaFjJJ27y5awoI6/XaRZb+IFkjRqCNw/kfXd+ksmgifcsLxgqojFVxdaFuqQ7N/xjlhCSLXWQPp+e1qQvMILBOR1Buob54YNvIUzasUuoHUqRKxjw1bNR13ySupIev0PrfSXQFUdyXlnQ4MMp7hleqMLirHz0GPLsBhaB71gzamenSPY7ETbPMB70TeerkFixDESmFZSooCDRmUxJygBPwja0NeTqje4rhKvFTG+WAHQ7vSMdvqAikariToSbnMUw==",
+            "id": "AKIAVSBQ2CEBGRYOUT4F",
+            "key_fingerprint": "3a3c1f3d71f59b09ca4315e8712c175cd56c3ee2",
+            "pgp_key": "keybase:nstreling",
+            "secret": null,
+            "ses_smtp_password_v4": null,
+            "status": "Active",
+            "user": "temp-admin"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_user.temp_admin",
+            "data.terraform_remote_state.organization"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_user",
+      "name": "temp_admin",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"].assume_deployment",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:iam::382354460930:user/temp-admin",
+            "force_destroy": true,
+            "id": "temp-admin",
+            "name": "temp-admin",
+            "path": "/",
+            "permissions_boundary": null,
+            "tags": {
+              "Environment": "eu-central-1",
+              "Name": "businesswatcher-eu-central-1-iac",
+              "Namespace": "businesswatcher"
+            },
+            "tags_all": {
+              "Environment": "eu-central-1",
+              "Name": "businesswatcher-eu-central-1-iac",
+              "Namespace": "businesswatcher"
+            },
+            "unique_id": "AIDAVSBQ2CEBKHKHWY3FI"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "data.terraform_remote_state.organization"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_user_policy_attachment",
+      "name": "assume_role_terraform_admin",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"].assume_deployment",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "temp-admin-20230826084304030300000009",
+            "policy_arn": "arn:aws:iam::382354460930:policy/CoreDeploymentAccountTerraformAdministratorRoleAccess",
+            "user": "temp-admin"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_user.temp_admin",
+            "data.terraform_remote_state.organization"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_user_policy_attachment",
+      "name": "assume_role_terraform_reader",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"].assume_deployment",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "temp-admin-20230826084304022400000008",
+            "policy_arn": "arn:aws:iam::382354460930:policy/CoreDeploymentAccountTerraformReaderRoleAccess",
+            "user": "temp-admin"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_user.temp_admin",
+            "data.terraform_remote_state.organization"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_user_policy_attachment",
+      "name": "assume_terraform_deploy_role_deployment_account",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"].assume_deployment",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "temp-admin-20230826084303982800000006",
+            "policy_arn": "arn:aws:iam::382354460930:policy/CoreDeploymentAccountTerraformDeploymentRoleAccess",
+            "user": "temp-admin"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_user.temp_admin",
+            "data.terraform_remote_state.organization"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_user_policy_attachment",
+      "name": "assume_terraform_deploy_role_development_account",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"].assume_deployment",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "temp-admin-20230826084303996000000007",
+            "policy_arn": "arn:aws:iam::382354460930:policy/CoreDevelopmentAccountTerraformDeploymentRoleAccess",
+            "user": "temp-admin"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_user.temp_admin",
+            "data.terraform_remote_state.organization"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_user_policy_attachment",
+      "name": "assume_terraform_deploy_role_logging_account",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"].assume_deployment",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "temp-admin-20230826084303980100000005",
+            "policy_arn": "arn:aws:iam::382354460930:policy/CoreLoggingAccountTerraformDeploymentRoleAccess",
+            "user": "temp-admin"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_user.temp_admin",
+            "data.terraform_remote_state.organization"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_user_policy_attachment",
+      "name": "assume_terraform_deploy_role_management_account",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"].assume_deployment",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "temp-admin-20230826084303535500000001",
+            "policy_arn": "arn:aws:iam::382354460930:policy/ManagementTerraformDeploymentRoleAccess",
+            "user": "temp-admin"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_user.temp_admin",
+            "data.terraform_remote_state.organization"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_user_policy_attachment",
+      "name": "assume_terraform_deploy_role_security_account",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"].assume_deployment",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "temp-admin-20230826084303973100000004",
+            "policy_arn": "arn:aws:iam::382354460930:policy/CoreSecurityAccountTerraformDeploymentRoleAccess",
+            "user": "temp-admin"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_user.temp_admin",
+            "data.terraform_remote_state.organization"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_user_policy_attachment",
+      "name": "assume_terraform_deploy_role_shared_services_account",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"].assume_deployment",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "temp-admin-20230826084303915300000003",
+            "policy_arn": "arn:aws:iam::382354460930:policy/CoreSharedServicesAccountTerraformDeploymentRoleAccess",
+            "user": "temp-admin"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_user.temp_admin",
+            "data.terraform_remote_state.organization"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_iam_user_policy_attachment",
+      "name": "code_commit_access",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"].assume_deployment",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "temp-admin-20230826084303732000000002",
+            "policy_arn": "arn:aws:iam::aws:policy/AWSCodeCommitPowerUser",
+            "user": "temp-admin"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_iam_user.temp_admin",
+            "data.terraform_remote_state.organization"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
